@@ -476,8 +476,7 @@ p5 {
 }
 
 .creative .gallery img {
-    height: 100%;
-    width: auto;
+    width: 100%;
 }
 
 .frameworks {
@@ -539,8 +538,7 @@ img {
     justify-content: center;
 }
 .commissions .gallery img {
-    height: 100%;
-    width: auto;
+    width: 100%;
 }
 
 
