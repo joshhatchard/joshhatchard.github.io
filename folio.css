@@ -107,10 +107,19 @@ body {
 }
 
 #dropnav {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   text-align: right;
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+#dropnav.active {
+  max-height: 300px;
+  transition: max-height 0.5s ease-in-out;
 }
 
 #dropnav li {
@@ -162,7 +171,6 @@ body {
  }
 }
 
-
 /* heading page*/
 .header {
   background-color: #26466C;
@@ -185,10 +193,11 @@ body {
   margin: auto;
 }
 .header #arrowbody {
-  width: 0.3vw;
+  width: 0.35vw;
   height: 7vw;
   background-color: #A8CAF3;
   margin: auto;
+  border-radius: 0.15vw;
 }
 .header #arrowhead {
   display: flex;
@@ -202,6 +211,7 @@ body {
   transform: rotate(45deg);
   position: relative;
   left: 0.325vw;
+  border-radius: 0.15vw;
 }
 .header #arrowhead #right {
   width: 1.5vw;
@@ -210,6 +220,7 @@ body {
   transform: rotate(-45deg);
   position: relative;
   left: -0.325vw;
+  border-radius: 0.15vw;
 }
 .header p1 {
   font-size: max(2vw, 15px);
@@ -477,6 +488,7 @@ p5 {
 
 .creative .gallery img {
 height: 20vw;
+width: auto;
 }
 
 .frameworks {
@@ -538,7 +550,8 @@ img {
   justify-content: center;
 }
 .commissions .gallery img {
-height: 25vw;
+  height: 25vw;
+  width: auto;
 }
 
 

@@ -1,21 +1,16 @@
-
 var dropnav = document.getElementById("dropnav");
 var icon = document.getElementById("options");
 
-icon.addEventListener("click", () => {   
-    if (window.innerWidth <= 800) {
-        if (dropnav.style.display === "none" || dropnav.style.display === "") {
-            dropnav.style.display = "flex";
-        } else {
-            dropnav.style.display = "none";
-        }
-    }
+icon.addEventListener("click", () => {
+  if (window.innerWidth <= 800) {
+    dropnav.classList.toggle("active");
+  }
 });
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 800) {
-        dropnav.style.display = "none";
-    }
+  if (window.innerWidth > 800) {
+    dropnav.classList.remove("active");
+  }
 });
 
 //scrolling nav bar
